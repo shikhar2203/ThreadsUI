@@ -25,10 +25,10 @@ struct LoginView: View {
                 
                 VStack{
                     TextField("Enter your email", text: $email)
+                        .autocapitalization(.none)
                         .modifier(ThreadsTextFieldModifier())
                     
                     SecureField("Enter your password", text: $password)
-                        .autocapitalization(.none)
                         .modifier(ThreadsTextFieldModifier())
                 }
                 
