@@ -55,6 +55,8 @@
 		E36B8E512AA8BA1B00CB8D72 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E36B8E502AA8BA1B00CB8D72 /* FirebaseStorageCombine-Community */; };
 		E36B8E552AA8CB9D00CB8D72 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36B8E542AA8CB9D00CB8D72 /* RegistrationViewModel.swift */; };
 		E36B8E572AA8CE6900CB8D72 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36B8E562AA8CE6900CB8D72 /* AuthService.swift */; };
+		E3F7C41B2AAA2A7900E86B2A /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7C41A2AAA2A7900E86B2A /* ContentViewModel.swift */; };
+		E3F7C41D2AAA2FD100E86B2A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7C41C2AAA2FD100E86B2A /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,8 @@
 		E36B8E192AA8B3AC00CB8D72 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E36B8E542AA8CB9D00CB8D72 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		E36B8E562AA8CE6900CB8D72 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		E3F7C41A2AAA2A7900E86B2A /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		E3F7C41C2AAA2FD100E86B2A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,7 +220,8 @@
 		E35FD6EB2AA4AF6C00C2665B /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				E35FD6D92AA4A52400C2665B /* ContentView.swift */,
+				E3F7C4192AAA2A5F00E86B2A /* ViewModel */,
+				E3F7C4182AAA2A5900E86B2A /* View */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -376,6 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				E36B8E542AA8CB9D00CB8D72 /* RegistrationViewModel.swift */,
+				E3F7C41C2AAA2FD100E86B2A /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -386,6 +392,22 @@
 				E36B8E562AA8CE6900CB8D72 /* AuthService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		E3F7C4182AAA2A5900E86B2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E35FD6D92AA4A52400C2665B /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E3F7C4192AAA2A5F00E86B2A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E3F7C41A2AAA2A7900E86B2A /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -499,10 +521,12 @@
 				E35FD6EF2AA4AF9F00C2665B /* LoginView.swift in Sources */,
 				E35FD70F2AA66E0900C2665B /* ThreadCell.swift in Sources */,
 				E35FD6DA2AA4A52400C2665B /* ContentView.swift in Sources */,
+				E3F7C41D2AAA2FD100E86B2A /* LoginViewModel.swift in Sources */,
 				E35FD7122AA6751800C2665B /* CircularProfileImageView.swift in Sources */,
 				E35FD7142AA6758E00C2665B /* UserCell.swift in Sources */,
 				E35FD6F72AA50E1000C2665B /* ThreadsTabView.swift in Sources */,
 				E35FD7172AA6FC7500C2665B /* ProfileThreadFilter.swift in Sources */,
+				E3F7C41B2AAA2A7900E86B2A /* ContentViewModel.swift in Sources */,
 				E35FD6F42AA50B5A00C2665B /* ThreadsTextFieldModifier.swift in Sources */,
 				E35FD6D82AA4A52400C2665B /* ThreadsUIApp.swift in Sources */,
 				E35FD6FF2AA510FD00C2665B /* ExploreView.swift in Sources */,
