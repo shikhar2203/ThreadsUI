@@ -10,7 +10,6 @@ import FirebaseFirestoreSwift
 
 class UserService {
     @Published var currentUser: User?
-    
     static let shared = UserService()
     
     init(){

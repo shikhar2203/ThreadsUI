@@ -11,7 +11,6 @@ import FirebaseFirestoreSwift
 class AuthService {
     
     @Published var userSession: FirebaseAuth.User?
-    
     static let shared = AuthService()
     
     init() {
@@ -55,6 +54,7 @@ class AuthService {
         username: String,
         id: String
     ) async throws {
+        
         let user = User(id: id, fullname: fullname, email: email, username: username)
         guard let userData = try? Firestore.Encoder().encode(user) else { return }
         try await Firestore.firestore().collection("users").document(id).setData(userData)
