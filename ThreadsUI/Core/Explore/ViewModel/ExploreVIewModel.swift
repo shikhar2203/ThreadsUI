@@ -14,6 +14,7 @@ class ExploreVIewModel: ObservableObject {
         Task { try await fetchUsers() }
     }
     
+    @MainActor
     private func fetchUsers() async throws {
         self.users = try await UserService.fetchUsers()
     }
