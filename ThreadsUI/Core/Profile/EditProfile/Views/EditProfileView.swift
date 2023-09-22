@@ -30,12 +30,12 @@ struct EditProfileView: View {
                                 .fontWeight(.semibold)
                             
                             Text("Threads")
-                                
+                            
                         }
                         
                         Spacer()
                         
-//                        CircularProfileImageView()
+                       
                         PhotosPicker(selection: $viewModel.selectedItem) {
                             if let image = viewModel.profileImage {
                                 image
@@ -75,7 +75,7 @@ struct EditProfileView: View {
                 }
                 .font(.footnote)
                 .padding()
-                .background(.white)        
+                .background(.white)
                 .cornerRadius(10)
                 .overlay(content: {
                     RoundedRectangle(cornerRadius: 10)
@@ -96,7 +96,7 @@ struct EditProfileView: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Done") {
-                        Task { 
+                        Task {
                             try await viewModel.updateUserData()
                             dismiss()
                         }

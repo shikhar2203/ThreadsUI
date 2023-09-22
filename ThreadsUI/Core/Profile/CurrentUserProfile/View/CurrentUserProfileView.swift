@@ -55,7 +55,7 @@ struct CurrentUserProfileView: View {
                         Image(systemName: "line.3.horizontal")
                             .foregroundColor(.black)
                     }
-
+                    
                 }
             })
             .padding(.horizontal)
