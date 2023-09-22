@@ -8,28 +8,32 @@
 import SwiftUI
 
 struct ThreadCreationView: View {
-    @State private var caption = ""
+    @StateObject var viewModel = ThreadCreationViewModel()
     @Environment(\.dismiss) var dismiss
+    
+    private var user: User? {
+        return UserService.shared.currentUser
+    }
     
     var body: some View {
         NavigationStack{
             VStack{
                 HStack(alignment: .top){
-                    CircularProfileImageView(user: nil, size: .small)
+                    CircularProfileImageView(user: user, size: .small)
                     
                     VStack(alignment: .leading, spacing: 4){
                         Text("Threadsofficial")
                             .fontWeight(.semibold)
                         
-                        TextField("Start a Thread...", text: $caption, axis: .vertical)
+                        TextField("Start a Thread...", text: $viewModel.caption, axis: .vertical)
                     }
                     .font(.footnote)
                     
                     Spacer()
                     
-                    if !caption.isEmpty {
+                    if !viewModel.caption.isEmpty {
                         Button(action: {
-                            caption = ""
+                            viewModel.caption = ""
                         }, label: {
                             Image(systemName: "xmark")
                                 .resizable()
@@ -55,10 +59,12 @@ struct ThreadCreationView: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Post") {
-                        
+                        Task { try await viewModel.uploadThread()
+                                dismiss()
+                        }
                     }
-                    .opacity(caption.isEmpty ? 0.5 : 1.0)
-                    .disabled(caption.isEmpty)
+                    .opacity(viewModel.caption.isEmpty ? 0.5 : 1.0)
+                    .disabled(viewModel.caption.isEmpty)
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .foregroundColor(.black)
