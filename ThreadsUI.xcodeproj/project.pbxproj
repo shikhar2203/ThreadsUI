@@ -66,6 +66,7 @@
 		E3A6E5992ABE21DA00A0EC6E /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A6E5982ABE21DA00A0EC6E /* Thread.swift */; };
 		E3A6E59C2ABE25A000A0EC6E /* ThreadCreationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A6E59B2ABE25A000A0EC6E /* ThreadCreationViewModel.swift */; };
 		E3A6E59E2ABE25D000A0EC6E /* ThreadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A6E59D2ABE25D000A0EC6E /* ThreadService.swift */; };
+		E3A6E5A12ABFA33F00A0EC6E /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A6E5A02ABFA33F00A0EC6E /* FeedViewModel.swift */; };
 		E3B1D4742AAB775800D68D1B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B1D4732AAB775800D68D1B /* User.swift */; };
 		E3B1D4762AAB7E6C00D68D1B /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B1D4752AAB7E6C00D68D1B /* UserService.swift */; };
 		E3B1D4792AAB807D00D68D1B /* CurrentUserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B1D4782AAB807D00D68D1B /* CurrentUserProfileViewModel.swift */; };
@@ -106,6 +107,7 @@
 		E3A6E5982ABE21DA00A0EC6E /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		E3A6E59B2ABE25A000A0EC6E /* ThreadCreationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadCreationViewModel.swift; sourceTree = "<group>"; };
 		E3A6E59D2ABE25D000A0EC6E /* ThreadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadService.swift; sourceTree = "<group>"; };
+		E3A6E5A02ABFA33F00A0EC6E /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		E3B1D4732AAB775800D68D1B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E3B1D4752AAB7E6C00D68D1B /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		E3B1D4782AAB807D00D68D1B /* CurrentUserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileViewModel.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 		E35FD6F82AA5109300C2665B /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				E3A6E59F2ABFA33400A0EC6E /* ViewModel */,
 				E35FD6F92AA5109C00C2665B /* View */,
 			);
 			path = Feed;
@@ -491,6 +494,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		E3A6E59F2ABFA33400A0EC6E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E3A6E5A02ABFA33F00A0EC6E /* FeedViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		E3F7C4182AAA2A5900E86B2A /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -630,6 +641,7 @@
 				E35FD7142AA6758E00C2665B /* UserCell.swift in Sources */,
 				E35FD6F72AA50E1000C2665B /* ThreadsTabView.swift in Sources */,
 				E3A6E59C2ABE25A000A0EC6E /* ThreadCreationViewModel.swift in Sources */,
+				E3A6E5A12ABFA33F00A0EC6E /* FeedViewModel.swift in Sources */,
 				E35FD7172AA6FC7500C2665B /* ProfileThreadFilter.swift in Sources */,
 				E3A6E5942ABB640200A0EC6E /* ImageUploader.swift in Sources */,
 				E3F7C41B2AAA2A7900E86B2A /* ContentViewModel.swift in Sources */,
